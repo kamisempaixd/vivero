@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Listado de Plantas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-searchbar pacehlder="Buscar" (ionChange)="filtrar_plantas($event)"></ion-searchbar>
+
+<button [routerLink]="['/nuevaplanta']">Nuevo</button>
+
+<ion-grid>
+  <ion-row *ngFor="let planta of filtro_plantas">
+    <ion-col>
+      <div>
+        <ion-img src="http://localhost/enano/imagen/{{planta.imagen}}"></ion-img>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <ion-label>{{planta.codigo}}</ion-label><br>
+        <ion-label>{{planta.nombre}}</ion-label><br>
+        <ion-label>{{planta.precio_produccion}}</ion-label><br>
+        <ion-label>{{planta.precio_venta}}</ion-label><br>
+        <ion-label>{{planta.stock}}</ion-label><br>
+        <ion-label>{{planta.descripcion}}</ion-label>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <button [routerLink]="['/nuevaplanta',planta.id_plantas]" >Editar</button>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>

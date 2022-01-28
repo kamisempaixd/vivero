@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Planta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-img src=""></ion-img><br>
+
+  <ion-item>
+    <ion-label position="floating">Codigo</ion-label>
+    <ion-input [(ngModel)]="txtCodigo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="txtNombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Precio Produccion</ion-label>
+    <ion-input [(ngModel)]="txtPreciop"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Precio Venta</ion-label>
+    <ion-input [(ngModel)]="txtPreciov"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">stock</ion-label>
+    <ion-input [(ngModel)]="txtStock"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">descripcion</ion-label>
+    <ion-input [(ngModel)]="txtDescripcion"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Categoria</ion-label>
+    <ion-select okText="Si" cancelText="Cancelar" [(ngModel)]="txtCategoria">
+      <ion-select-option [value]="categoria.id_categoria_plantas" *ngFor="let categoria of categorias">{{categoria.detalle_categoria}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Estado</ion-label>
+    <ion-select okText="Si" cancelText="Cancelar" [(ngModel)]="txtEstado">
+      <ion-select-option [value]="estado.id_estado_plantas" *ngFor="let estado of estados">{{estado.detalle_estado_planta}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+<button (click)="guardar()">Guardar</button>
+</ion-content>

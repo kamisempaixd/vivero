@@ -1,0 +1,7 @@
+{
+  "name": "vivero",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
