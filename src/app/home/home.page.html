@@ -21,7 +21,7 @@
   <ion-row *ngFor="let planta of filtro_plantas">
     <ion-col>
       <div>
-        <ion-img src="http://localhost/enano/imagen/{{planta.imagen}}"></ion-img>
+        <ion-img [src]="planta.imagen"></ion-img>
       </div>
     </ion-col>
     <ion-col>
@@ -35,11 +35,18 @@
       </div>
     </ion-col>
     <ion-col>
-      <div>
+      <ion-row>
         <button [routerLink]="['/nuevaplanta',planta.id_plantas]" >Editar</button>
-      </div>
+        <ion-button (click)="addCarrito(planta)">Añadir</ion-button>
+      </ion-row>
     </ion-col>
   </ion-row>
 </ion-grid>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="abrirCarrito()" #cart>
+    <ion-icon name="cart" class="cart-icon"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 
 </ion-content>

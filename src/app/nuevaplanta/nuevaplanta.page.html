@@ -6,7 +6,13 @@
 
 <ion-content>
 
-  <ion-img src=""></ion-img><br>
+<div *ngIf="previsualizacion">
+  <img width="500px" [src]="previsualizacion" alt="">
+</div>
+
+  <div>
+    <ion-input type="file" (change)="capturar($event)"></ion-input>
+  </div>
 
   <ion-item>
     <ion-label position="floating">Codigo</ion-label>

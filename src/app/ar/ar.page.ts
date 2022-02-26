@@ -10,6 +10,7 @@ export class ArPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

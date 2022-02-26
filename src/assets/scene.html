@@ -36,21 +36,24 @@
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
       >
         <!-- we use cors proxy to avoid cross-origin problems -->
+        <!-- Modelo 5-->
         <a-nft
-          type="nft"
-          url="assets/trex/trex-image/trex"
-          smooth="true"
-          smoothCount="10"
-          smoothTolerance=".01"
-          smoothThreshold="5"
+        type="nft"
+        url="assets/manzana/image/manzana"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
         >
-          <a-entity
-            gltf-model="trex/scene.gltf"
-            scale="50 50 50"
-            position="0 0 0"
-          >
-          </a-entity>
+        <a-entity
+          gltf-model="manzana/scene.gltf"
+          scale="1000 1000 1000"
+          position="0 0 0"
+          rotation="-70 0 0"
+        >
+        </a-entity>
         </a-nft>
+        <!--  Modelo 5-->
         <a-entity camera></a-entity>
       </a-scene>
     </body>
